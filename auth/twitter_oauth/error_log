@@ -1,0 +1,41 @@
+[11-Nov-2012 14:14:57] Session:
+[11-Nov-2012 14:14:57] Request:T6sTH2arjKl1RGdqS1y7qKLDX7Ip8aLNDIEn8N3Mnic
+[11-Nov-2012 14:16:22] Session:
+[11-Nov-2012 14:16:22] Request:gklqR4ZN0MCrgqIqfnM5FFzRSXBPhmlm1t2Hq6m3jg0
+[11-Nov-2012 14:21:34] Session:
+[11-Nov-2012 14:21:34] Request:ibCvJ4eKH84Y8JfzsU1rTAAKBcJ9yagEfIbWSEZMMEI
+[11-Nov-2012 14:22:54] Session:
+[11-Nov-2012 14:22:54] Request:
+[11-Nov-2012 14:22:57] Session:
+[11-Nov-2012 14:22:57] Request:
+[11-Nov-2012 14:25:44] Session:
+[11-Nov-2012 14:25:44] Request:ibCvJ4eKH84Y8JfzsU1rTAAKBcJ9yagEfIbWSEZMMEI
+[11-Nov-2012 14:26:25] session id in redirect:ca888893a39d3f812185d3a9e6ffca32
+[11-Nov-2012 14:26:30] Session:
+[11-Nov-2012 14:26:30] Request:pkGWRBaGrTDS6uXYWEkAm5gCHWtH7oZqpJUIkC46UyA
+[11-Nov-2012 14:26:30] session id in callback:f0f9838adab01b3122cf42903880aa47
+[11-Nov-2012 14:32:54] session id in redirect:
+[11-Nov-2012 14:33:05] Session:
+[11-Nov-2012 14:33:05] Request:L8gFCehKcXAV5E0T47qz8TuHKJkOH8bl79sEnI98E
+[11-Nov-2012 14:33:05] session id in callback:f0f9838adab01b3122cf42903880aa47
+[11-Nov-2012 14:35:16] session id in redirect:
+[11-Nov-2012 14:36:09] Session:
+[11-Nov-2012 14:36:09] Request:L8gFCehKcXAV5E0T47qz8TuHKJkOH8bl79sEnI98E
+[11-Nov-2012 14:36:09] session id in callback:
+[11-Nov-2012 14:49:15] session id in redirect:9aba1109c4ade518fec3b98c67e87ec0
+[11-Nov-2012 14:49:21] Session:
+[11-Nov-2012 14:49:21] Request:xPNYYCHzyCt8VbUJF4ItU1aQfVJfy8FloFZLYgjvU
+[11-Nov-2012 14:49:21] session id in callback:9aba1109c4ade518fec3b98c67e87ec0
+[11-Nov-2012 14:51:08] session id in redirect:
+[11-Nov-2012 14:51:14] Session:gjJrpPHa1xDehfCsCvm9hxL4U63rvJmzz3QBLV3RTwI
+[11-Nov-2012 14:51:14] Request:gjJrpPHa1xDehfCsCvm9hxL4U63rvJmzz3QBLV3RTwI
+[11-Nov-2012 14:51:14] session id in callback:b4f1de1885a246c275e8910e1c105948
+[11-Nov-2012 14:52:10] session id in redirect:
+[11-Nov-2012 14:52:37] Session:
+[11-Nov-2012 14:52:37] Request:xPNYYCHzyCt8VbUJF4ItU1aQfVJfy8FloFZLYgjvU
+[11-Nov-2012 14:52:37] session id in callback:
+[11-Nov-2012 14:54:40] Session:
+[11-Nov-2012 14:54:40] Request:gjJrpPHa1xDehfCsCvm9hxL4U63rvJmzz3QBLV3RTwI
+[11-Nov-2012 14:54:40] session id in callback:
+[11-Nov-2012 15:22:25] PHP Catchable fatal error:  Object of class stdClass could not be converted to string in /home/foodiesc/public_html/beta/auth/twitter_oauth/callback.php on line 39
+[11-Nov-2012 15:57:21] PHP Fatal error:  Call to undefined function  get_page_url() in /home/foodiesc/public_html/beta/auth/twitter_oauth/callback.php on line 71

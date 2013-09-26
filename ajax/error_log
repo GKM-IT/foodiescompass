@@ -1,0 +1,4 @@
+[07-Aug-2013 22:31:27] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/foodiesc/public_html/beta/ajax/autosuggest_place.php on line 23
+[07-Aug-2013 22:31:27] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/foodiesc/public_html/beta/ajax/autosuggest_place.php:23) in /home/foodiesc/public_html/beta/ajax/autosuggest_place.php on line 53
+[07-Aug-2013 22:31:28] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/foodiesc/public_html/beta/ajax/autosuggest_place.php on line 23
+[07-Aug-2013 22:31:28] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/foodiesc/public_html/beta/ajax/autosuggest_place.php:23) in /home/foodiesc/public_html/beta/ajax/autosuggest_place.php on line 53
