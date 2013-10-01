@@ -166,7 +166,7 @@
 		<link href="css/jquery.selectbox.css" type="text/css" rel="stylesheet" />
 	</head>
 		
-	<body class="home" onload="initialize()">
+	<body class="home" onLoad="initialize()">
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAlQYf89csqKsLvfVCa47155gT9qBkdi-w&sensor=true&libraries=places"></script>
 	
 	<?php require_once("./include/fb_js.inc.php"); ?>
@@ -277,7 +277,7 @@
 												}
 											?>
 											<div style="margin:5px;">Email</div>
-											<input name="email" type="text" class="input1" style="width:300px;" value="<?php echo $user_data['email']; ?>" readonly/>
+											<input name="email" type="text" class="input1" style="width:300px;" value="<?php echo $user_data['email']; ?>"/>
 										</div>
 										<div class="user_info">
 											<div style="margin:5px;">Address</div>
