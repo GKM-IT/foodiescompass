@@ -134,7 +134,13 @@ require_once("./include/connection.inc.php");
 					<span class="text_style1">LET US FIND YOUR PERFECT MASALA DOSA</span><br/>
 					Get food reviews, photographs and more..<br/>
 					<div id="fb_button_holder">
-						<a class="login_popup" id="fb_signup_btn" href="javascript:void(0);"></a>
+                    <?php if($_SESSION['username']==0 && $_SESSION['username']==''){?>
+						<span><a class="login_popup" id="fb_signup_btn" href="javascript:void(0);"></a></span>
+                        <?php }
+						else
+						{?>
+                        <span style="display:none"><a class="login_popup" id="fb_signup_btn" href="javascript:void(0);"></a></span>
+                        <?php }?>
 					</div>
 					
 				</div>

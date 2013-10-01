@@ -77,7 +77,7 @@
 		<script src="js/lightbox.js"></script>
 	</head>
 		
-	<body class="home" onload="initialize()">
+	<body class="home" onLoad="initialize()">
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAlQYf89csqKsLvfVCa47155gT9qBkdi-w&sensor=true&libraries=places"></script>
 	<?php require_once("./include/fb_js.inc.php"); ?>
 	
@@ -116,10 +116,16 @@
 						<div style="margin:0 10px 0 10px; padding-bottom:5px; margin-top:15px;">
 						<input type="hidden" name="food_id" id="food_id" value="<?php echo $food["food_items_id"]?>"/>
 							<div id="food_result_left" style="float:left; width:400px; position:relative;">
-							<div>
+							
+                            <!-- /////////////////////////// -->
+                            
+                            <div>
 							<a href="<?php echo get_page_url("food_pic",array("fid"=>$food["food_items_id"], "size"=>"full")); ?>" rel="lightbox[sims]" style="text-decoration: none;"><img src="<?php echo get_page_url("food_pic",array("fid"=>$food["food_items_id"], "size"=>"normal")); ?>" style="margin-left:5px;"/>
 							</a></div>
-							<div style="margin-top: -14px; float:left; ">
+                            
+                            
+                            <!-- /////////////////////////// -->
+							<div style="margin-top: -14px; float:left; display:none ">
 								<img src="<?php echo BASE_URL_2?>images/icon_info.png" style="position:absolute; z-index:90"  class="tooltip" title="This picture is just representation of food item and may/ may not represent the actual dish.">
 								<div class="clearfix"></div>
 							</div>
@@ -195,16 +201,16 @@
 							
 							?></p>
 							<p class="des_title" style="float:right">
-								<a id="prevc1" href="javascript:void(0)" onclick="all_comment(<?php echo logged_userid().','.$food_id?>);">View all</a>
-								<a id="prevc2" href="javascript:void(0)" onclick="less_comment(<?php echo logged_userid().','.$food_id?>);" style="display:none;">View less</a>
+								<a id="prevc1" href="javascript:void(0)" onClick="all_comment(<?php echo logged_userid().','.$food_id?>);">View all</a>
+								<a id="prevc2" href="javascript:void(0)" onClick="less_comment(<?php echo logged_userid().','.$food_id?>);" style="display:none;">View less</a>
 								<?php if(is_logged_in())
 { ?>
-<a id="newc" href="javascript:void(0)" onclick="write_comment();">Write Comment</a>
+<a id="newc" href="javascript:void(0)" onClick="write_comment();">Write Comment</a>
 <?php }
 else
 {
 ?>
-<a id="newc" class="login_popup" href="javascript:void(0)" onclick="write_comment();">Write Comment</a>
+<a id="newc" class="login_popup" href="javascript:void(0)" onClick="write_comment();">Write Comment</a>
 <?php } ?>
 								
 								
@@ -232,7 +238,7 @@ else
   </div>
   <div id="comment_textarea_div">
   <textarea id="comment_textarea" placeholder="Enter Comment ..."></textarea></div>
-  <br><input type="button" value="Comment" id="upload_comment" onclick="put_comment(<?php echo logged_userid().','.$food_id?>);"/>
+  <br><input type="button" value="Comment" id="upload_comment" onClick="put_comment(<?php echo logged_userid().','.$food_id?>);"/>
 </form>
 		</div>					
 				<!---------comments end -------->
@@ -262,6 +268,7 @@ $result= mysql_query("select comment.user_id, comment.comment, comment.date, use
 				</div>';
 				}
 				}
+				
 		?>
 
 
@@ -362,7 +369,16 @@ $result= mysql_query("select comment.user_id, comment.comment, comment.date, use
 										</tr>
 										</table>
 										<div style="margin:10px 0 20px 0">
-										<span style="background:#FDECD6; padding:5px 10px;">Cost: INR <?php echo $food['cost'];?></span>
+                                        <?php 
+										if($food['cost'] == 0)
+										{
+										?>
+										<span style="display:none">Cost: INR <?php echo $food['cost'];?></span><?php 
+										}
+										else
+										 {?>
+                                         <span style="background:#FDECD6; padding:5px 10px;">Cost: INR <?php echo $food['cost'];?></span><?php 
+										}?>
 										</div>
 										
 										<a href="<?php echo get_page_url('restaurant',array('eid'=>$food['rest_id']));?>"><img src="images/button_more_at_this_place.png"></a>&nbsp;&nbsp;
@@ -869,4 +885,4 @@ function write_comment()
 </script>
 	</body>
 	<?php include ABS_PATH_TO_HOME.'include/tiptip.php'; ?>
-</html>
+</html>	
