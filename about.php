@@ -21,7 +21,7 @@
 
 	</head>
 		
-	<body class="home" onload="initialize()">
+	<body class="home" onLoad="initialize()">
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAlQYf89csqKsLvfVCa47155gT9qBkdi-w&sensor=true&libraries=places"></script>
 	
 	<!-- The popup -->
@@ -48,7 +48,9 @@
 
 					</div>
 					<div id="about_right">
-					<h1 class="heading_type1">Contact Form</h1>
+					<h1 class="heading_type1">Contact Form
+					  <input type="text" id="email" name="email" value="<?php echo $email? $email:'Your Email';?>" title="Your Email" class="input1 searchfood" style="width:300px; display:none;"/>
+					</h1>
 					<div id="contact_form">
 					<form>
 <?php
@@ -63,17 +65,17 @@ if(is_logged_in())
 
 
 ?>						
-							<input type="text" id="name" name="name" value="<?php echo $name? $name:'Your Name';?>" title="Your Name" class="input1 searchfood" style="width:300px;"/>
+							<input type="text" id="name" name="name" value="<?php echo $name? $name:'Your Name';?>" title="Your Name" class="input1 searchfood" style="width:300px; display:none;"/>
 							<input type="hidden" id="user_id" value="<?php echo logged_userid();?>"/>
 							<span id="nameInfo" style="float:left; margin-left:10px;" class="food_form_error"></span>
 							<div style="margin-bottom:20px;"></div>
-							<input type="text" id="email" name="email" value="<?php echo $email? $email:'Your Email';?>" title="Your Email" class="input1 searchfood" style="width:300px;"/>
 							<span id="emailInfo" style="float:left; margin-left:10px;" class="food_form_error"></span>
-							<div style="margin-bottom:20px;"></div>
-							<textarea id="message" name="message" style="width:400px; height:200px; font-size:13px; line-height:1.5;" class="input1 searchfood" onclick="clear_this_textarea()" onblur="ret_this_textarea()">Your Message</textarea>
+							<div style="margin-bottom:20px;">
+							  <textarea id="message" name="message" style="width:400px; height:200px; font-size:13px; line-height:1.5;" class="input1 searchfood" onClick="clear_this_textarea()" onBlur="ret_this_textarea()">Your Message</textarea>
+							</div>
 							<span id="messageInfo" style="float:left; margin-left:10px;" class="food_form_error"></span>
-							<div style="margin-bottom:20px;"></div>
-							<input type="button" class="button1" value="Send" onclick="sendmessage();">				
+			    <div style="margin-bottom:20px;"></div>
+							<input type="button" class="button1" value="Send" onClick="sendmessage();">				
 </form>	
 	</div>				
 					
