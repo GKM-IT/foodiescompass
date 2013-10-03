@@ -354,14 +354,14 @@ $result= mysql_query("select comment.user_id, comment.comment, comment.date, use
 												else if($food['vegetarian']==1)
 												{
 											?>
-											<td><img src="images/icon_non_vegy.png"></td>
+											<td><img src="images/nonveg.png"></td>
 											<td><span class="non_veg">Non Vegetarian</span></td>
 											<?php
 												}
 												else if($food['vegetarian']==2)
 												{
 											?>
-											<td><img src="images/icon_vegy.png"></td>
+											<td><img src="images/veg.png"></td>
 											<td><span class="non_veg">Vegetarian</span></td>
 											<?php
 												}
