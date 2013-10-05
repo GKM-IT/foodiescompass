@@ -201,7 +201,13 @@
 							     echo mysql_num_rows($result)."</span> Comments";
 							?></p>
 							<p class="des_title" style="float:right">
+                            <?php if(mysql_num_rows($result)>=1){?>
 								<a id="prevc1" href="javascript:void(0)" onClick="all_comment(<?php echo logged_userid().','.$food_id?>);">View all</a>
+                                <?php }
+								else {
+								?>
+                                <a style="display:none !important;" id="prevc1" href="javascript:void(0)" onClick="all_comment(<?php echo logged_userid().','.$food_id?>);">View all</a>
+                                <?php }?>
 								<a id="prevc2" href="javascript:void(0)" onClick="less_comment(<?php echo logged_userid().','.$food_id?>);" style="display:none;">View less</a>
 								<?php if(is_logged_in())
 { ?>
