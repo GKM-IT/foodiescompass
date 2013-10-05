@@ -1381,7 +1381,15 @@ text-decoration: none;
 font-size: 12px;
 		margin-left:10px;
 	}
-	
+#prevc3{
+color: #fff;
+background-color: #5b4a42;
+text-decoration: none;
+font-size: 12px;
+margin-left:10px;
+padding:5px;
+border-radius:5px;
+	}	
 	#newc{
 		color: #fff;
 background-color: #5b4a42;

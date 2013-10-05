@@ -154,10 +154,10 @@
 								if(is_logged_in())
 								{
 								?>
-								<div style="float:right; margin-top:5px;"><a id="prevc1" href="<?php echo get_page_url("add_pic",array("fid"=>$food["food_items_id"])); ?>">Add Pictures</a></div>
+								<div style="float:right; margin-top:5px;"><a id="prevc3" href="<?php echo get_page_url("add_pic",array("fid"=>$food["food_items_id"])); ?>">Add Pictures</a></div>
 								
 								<?php } else {?>
-								<div style="float:right; margin-top:5px;"><a class="login_popup" id="prevc1"  href="javascript:void(0);">Add Pictures</a></div>
+								<div style="float:right; margin-top:5px; "><a class="login_popup" id="prevc1"  href="javascript:void(0);">Add Pictures</a></div>
 								<?php 
 								}
 								$str_like = render_like_pair($food['food_items_id']);
@@ -197,8 +197,8 @@
 							<div style="margin-top:8px;border-top: 1px solid #ccc; padding-top:8px;">
 							<p class="des_title" style="float:left"><span id="comment_count"><?php
 							$result= mysql_query("select comment_id from comment where food_id='$_GET[eid]'");
-							echo mysql_num_rows($result)."</span> Comments";
-							
+							if(mysql_num_rows($result)>0)
+							     echo mysql_num_rows($result)."</span> Comments";
 							?></p>
 							<p class="des_title" style="float:right">
 								<a id="prevc1" href="javascript:void(0)" onClick="all_comment(<?php echo logged_userid().','.$food_id?>);">View all</a>
