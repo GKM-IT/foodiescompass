@@ -224,7 +224,9 @@ echo '<div id="follower_item" style="width:450px;float:left; height:120px;">
 								}
 								else
 								{
-									echo $user["city"];
+									$FCname  = $user["city"];
+									$pieces = explode(",", $FCname);
+									echo $pieces[0];
 								}
 								echo '</b></div>';
 								}
