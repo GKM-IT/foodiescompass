@@ -58,12 +58,12 @@ ON food_items.rest_id=restaurant.rsID where food_items.food_items_id='".$input[$
 		{
 			
 			
-			$restr_query = mysql_query("SELECT food_items.food_items_id,food_items.description, food_items.likes,food_items.dislikes, food_items.dish_image, food_items.dish_name, restaurant.res_name, restaurant.res_address, restaurant.res_city
+			$restr_query = mysql_query("SELECT food_items.food_items_id,food_items.dish_url,food_items.description, food_items.likes,food_items.dislikes, food_items.dish_image, food_items.dish_name, restaurant.res_name, restaurant.res_address, restaurant.res_city
 FROM food_items
 INNER JOIN restaurant
 ON food_items.rest_id=restaurant.rsID where food_items.food_items_id='".$input[$rand_keys[$i]]."'");
 			$restr = mysql_fetch_array($restr_query);
-			$url = get_page_url("food",array("eid"=>$restr["food_items_id"]));
+			$url = get_page_url("food",array("eid"=>$restr["dish_url"]));
 			echo '
 			<div id="recent_item">
 				<div id="recent_item_pic"><a href="'.$url.'" style="color:inherit"><img src="'.get_page_url("food_pic",array("fid"=>$restr["food_items_id"], "size"=>"thumb")).'"/></a></div>

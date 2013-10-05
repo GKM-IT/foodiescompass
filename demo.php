@@ -358,7 +358,7 @@ array_push($lat_array, $restr["res_lat"]);
 array_push($lng_array, $restr["res_lng"]);
 array_push($place_name, $restr["res_name"]);
 
-echo '<a href="'.get_page_url('food',array('eid'=>$food['food_items_id'])).'"><div class="map_food_item" id="food_item'.$count.'" style="cursor:pointer;';
+echo '<a href="'.get_page_url('food',array('eid'=>$food['dish_url'])).'"><div class="map_food_item" id="food_item'.$count.'" style="cursor:pointer;';
 if(in_array($food['food_items_id'],$food_ids_main)) echo "background:#fff; opacity:1";
 
 echo '" onmouseover="set_icon(marker'.$count.','.$count.', '.$restr["res_lat"].', '.$restr["res_lng"].' )" onmouseout="remove_icon(marker'.$count.')">
